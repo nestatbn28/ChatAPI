@@ -27,7 +27,7 @@ List returns a JSON response in the following format:
 }
 ```
 
-
+'Disarankan untuk menambah user lebih dari 1 orang'
 POST http://127.0.0.1:8000/api/store
 
 | Parameter | Type | 
