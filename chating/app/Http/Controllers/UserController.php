@@ -14,7 +14,12 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $user = User::All();
+        return response()->json([
+            "success" => true,
+            "message" => "List user",
+            "result" =>  $user
+            ]);
     }
 
     /**
@@ -37,7 +42,12 @@ class UserController extends Controller
     {
         $user = new User();
         $user->nama = $request->nama;
-        $user->save();
+        if($user->save()){
+            return response()->json([
+                "success" => true,
+                "message" => "User berhasil ditambahkan.",
+                ]);
+      }
 
     }
 

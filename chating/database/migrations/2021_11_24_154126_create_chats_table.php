@@ -18,7 +18,7 @@ class CreateChatsTable extends Migration
             $table->mediumText('message');
             $table->unsignedBigInteger('pengirim');
             $table->unsignedBigInteger('penerima');
-            $table->enum('status', [ 0,1])->default(0);
+            $table->enum('status', [ '0','1'])->default('0');
             $table->foreign('pengirim')->references('id')->on('user')->onDelete('cascade');
             $table->foreign('penerima')->references('id')->on('user')->onDelete('cascade');
             $table->timestamps();
