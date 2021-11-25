@@ -92,12 +92,14 @@ GET http://127.0.0.1:8000/api/percakapan/{id}/{tujuan percakapan}
     "result": [
         {
             "message": "Hy rian",
-            "penerima": "rian"
+            "penerima": "rian",
+            "created_at": "2021-11-25 03:42:39"
         },
         {
-            "message": "Hy Nesta",
-            "penerima": "nesta"
-        },
+            "message": "Hy Nesta?",
+            "penerima": "nesta",
+            "created_at": "2021-11-25 05:58:35"
+        }
     ]
 }
 ```
