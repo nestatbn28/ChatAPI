@@ -32,7 +32,7 @@ class ChatController extends Controller
     {
         $daftar =  DB::table('user as pen')->join('chat', 'chat.penerima', '=', 'pen.id')
         ->join('user as peng', 'chat.pengirim', '=', 'peng.id')
-        ->select('chat.message','pen.nama as penerima')
+        ->select('chat.message','pen.nama as penerima','created_at')
         ->where('pengirim','=',$id)
         ->where('penerima','=',$tujuan)
         ->orWhere('pengirim','=',$tujuan)
