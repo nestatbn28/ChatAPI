@@ -35,7 +35,10 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = new User();
+        $user->nama = $request->nama;
+        $user->save();
+
     }
 
     /**
