@@ -81,3 +81,23 @@ POST http://127.0.0.1:8000/api/daftarchat/{id}
     ]
 }
 ```
+
+
+GET http://127.0.0.1:8000/api/percakapan/{id}/{tujuan percakapan}
+## Responses
+```javascript
+{
+    "success": true,
+    "message": "List Percakapan",
+    "result": [
+        {
+            "message": "Hy rian",
+            "penerima": "rian"
+        },
+        {
+            "message": "Hy Nesta",
+            "penerima": "nesta"
+        },
+    ]
+}
+```
